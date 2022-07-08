@@ -2,6 +2,7 @@ package com.api.parkingcontrol.services;
 
 import java.time.LocalDateTime;
 import java.time.ZoneId;
+import java.util.List;
 import java.util.Optional;
 import java.util.UUID;
 
@@ -38,7 +39,7 @@ public class ParkingSpotService {
 		return parkingSpotRepository.existsByApartmentAndBlock(apartment, block);
 	}
 
-	public Object findAll() {
+	public List<ParkingSpotModel> findAll() {
 		return parkingSpotRepository.findAll();
 	}
 

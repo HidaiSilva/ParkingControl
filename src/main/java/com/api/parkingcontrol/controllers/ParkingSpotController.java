@@ -1,5 +1,6 @@
 package com.api.parkingcontrol.controllers;
 
+import java.util.List;
 import java.util.Optional;
 import java.util.UUID;
 
@@ -54,7 +55,7 @@ public class ParkingSpotController {
 	}
 
 	@GetMapping
-	public ResponseEntity<Object> getAllParkingSpot() {
+	public ResponseEntity<List<ParkingSpotModel>> getAllParkingSpot() {
 		return ResponseEntity.status(HttpStatus.OK).body(parkingSpotService.findAll());
 	}
 
